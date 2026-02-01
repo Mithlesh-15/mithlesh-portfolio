@@ -6,14 +6,18 @@ function Intro() {
   const introRef = useRef(null);
 
   useEffect(() => {
-    const totalTime = 4.2;
+    document.body.style.overflow = "hidden";
 
-    const tl = gsap.timeline({ delay: totalTime });
+    const path = document.querySelector("#curveClip path");
 
-    tl.to(introRef.current, {
-      y: "-100%",
-      duration: 1.4,
-      ease: "power4.inOut",
+    const tl = gsap.timeline({ delay: 4.2 });
+
+    tl.to(path, {
+      attr: {
+        d: "M0,0 H1 V0 Q0.5,0 0,0 Z",
+      },
+      duration: 1,
+      ease: "expo.inOut",
       onComplete: () => {
         introRef.current.style.display = "none";
         document.body.style.overflow = "auto";
@@ -24,8 +28,17 @@ function Intro() {
   return (
     <div
       ref={introRef}
-      className="fixed top-0 left-0 bg-black text-white w-screen h-screen flex flex-col justify-center items-center px-4 z-50"
+      className="fixed top-0 left-0 bg-black text-white w-screen h-screen flex flex-col justify-center items-center px-4 z-50 overflow-hidden"
+      style={{ clipPath: "url(#curveClip)" }}
     >
+      <svg width="0" height="0">
+        <defs>
+          <clipPath id="curveClip" clipPathUnits="objectBoundingBox">
+            <path d="M0,0 H1 V1 Q0.5,1.15 0,1 Z" />
+          </clipPath>
+        </defs>
+      </svg>
+
       <div className="flex flex-col items-center">
         <div className="w-full -mb-1.3 md:-mb-3.75 lg:-mb-5 xl:-mb-9 flex justify-start">
           <TextEffect
