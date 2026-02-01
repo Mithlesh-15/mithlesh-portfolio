@@ -27,7 +27,7 @@ function Intro() {
       className="fixed top-0 left-0 bg-black text-white w-screen h-screen flex flex-col justify-center items-center px-4 z-50"
     >
       <div className="flex flex-col items-center">
-        <div className="w-full -mb-2.5 md:-mb-3.75 lg:-mb-5 xl:-mb-9 flex justify-start">
+        <div className="w-full -mb-1.3 md:-mb-3.75 lg:-mb-5 xl:-mb-9 flex justify-start">
           <TextEffect
             preset="fade-in-blur"
             speedReveal={0.85}
