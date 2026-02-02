@@ -28,7 +28,7 @@ function Intro() {
   return (
     <div
       ref={introRef}
-      className="fixed top-0 left-0 bg-black text-white w-screen h-screen flex flex-col justify-center items-center px-4 z-50 overflow-hidden"
+      className="fixed top-0 left-0 bg-gray-950 text-white w-screen h-screen flex flex-col justify-center items-center px-4 z-50 overflow-hidden"
       style={{ clipPath: "url(#curveClip)" }}
     >
       <svg width="0" height="0">
