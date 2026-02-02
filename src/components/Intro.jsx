@@ -40,7 +40,7 @@ function Intro() {
       </svg>
 
       <div className="flex flex-col items-center">
-        <div className="w-full -mb-1.3 md:-mb-3.75 lg:-mb-5 xl:-mb-9 flex justify-start">
+        <div className="w-full -mb-1.5 md:-mb-3 lg:-mb-4 xl:-mb-5 flex justify-start">
           <TextEffect
             preset="fade-in-blur"
             speedReveal={0.85}

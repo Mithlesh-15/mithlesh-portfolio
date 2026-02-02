@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     <Intro/>
-    <div className='bg-gray-900 w-screen h-screen'>app</div>
+    <div className='bg-gray-900 text-white w-screen h-screen'>app</div>
     </>
   )
 }
