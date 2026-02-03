@@ -5,11 +5,10 @@ function Hero() {
   return (
     <>
       <div
-        className="fixed top-0 left-0 text-white w-screen h-screen flex flex-col justify-center items-center px-4 z-50 overflow-hidden pb-10"
-        style={{ clipPath: "url(#curveClip)" }}
+        className="text-white w-screen h-screen flex flex-col justify-center items-center pb-24"
       >
         <div className="flex flex-col items-center">
-          <div className="w-full text-green-500 -mb-0.5 md:-mb-0.5 lg:-mb-0.5 xl:-mb-1 flex justify-start text-xl  md:text-xl lg:text-2xl xl:text-3xl">
+          <div className="w-full text-green-400 -mb-0.5 md:-mb-0.5 lg:-mb-0.5 xl:-mb-1 flex justify-start text-xl  md:text-xl lg:text-2xl xl:text-3xl">
             Hey I'm
           </div>
 
@@ -19,7 +18,7 @@ function Hero() {
           <div className="w-full flex justify-end mt-2 text-2xl md:text-2xl lg:text-3xl xl:text-4xl">
             <div className="flex items-center gap-3">
               <TextLoop
-                className="overflow-y-clip"
+                className="overflow-y-clip text-green-400"
                 transition={{
                   type: "spring",
                   stiffness: 900,

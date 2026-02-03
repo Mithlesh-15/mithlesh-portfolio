@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Intro />
-      <div className="min-h-screen w-full relative">
+      <div className="min-h-screen w-full relative ">
         {/* Azure Depths */}
         <div
           className="absolute inset-0 -z-10"
