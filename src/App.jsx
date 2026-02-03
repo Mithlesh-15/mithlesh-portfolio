@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      {/* <Intro /> */}
+      <Intro />
       <div className="min-h-screen w-full relative">
         {/* Azure Depths */}
         <div
