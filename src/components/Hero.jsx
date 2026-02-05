@@ -4,9 +4,12 @@ import { TextLoop } from "../lib/motion/components/text-loop";
 function Hero() {
   return (
     <>
-      <div
-        className="text-white w-screen h-screen flex flex-col justify-center items-center pb-24"
-      >
+      <div className="relative text-white w-screen h-screen flex flex-col justify-center items-center pb-24">
+        <img
+          src="/components/Hero/logo.png"
+          alt="logo"
+          className="absolute -top-4 -left-4 w-24 sm:-top-6 sm:-left-6 sm:w-32 md:-top-8 md:-left-8 md:w-44"
+        />
         <div className="flex flex-col items-center">
           <div className="w-full text-green-500 -mb-0.5 md:-mb-0.5 lg:-mb-0.5 xl:-mb-1 flex justify-start text-xl  md:text-xl lg:text-2xl xl:text-3xl">
             Hey I'm
