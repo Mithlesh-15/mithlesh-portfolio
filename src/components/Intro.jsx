@@ -16,7 +16,7 @@ function Intro() {
       attr: {
         d: "M0,0 H1 V0 Q0.5,0 0,0 Z",
       },
-      duration: 1,
+      duration: 1.2,
       ease: "expo.inOut",
       onComplete: () => {
         introRef.current.style.display = "none";
@@ -28,7 +28,7 @@ function Intro() {
   return (
     <div
       ref={introRef}
-      className="fixed top-0 left-0 bg-gray-950 text-white w-screen h-screen flex flex-col justify-center items-center px-4 z-50 overflow-hidden"
+      className="fixed top-0 left-0 bg-gray-950 text-white w-screen h-screen flex flex-col justify-center items-center px-4 z-50 overflow-hidden pb-24"
       style={{ clipPath: "url(#curveClip)" }}
     >
       <svg width="0" height="0">
