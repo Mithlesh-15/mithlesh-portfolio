@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Intro from "./components/intro";
 import Hero from "./components/Hero";
+import Navbar from "./components/NavBar";
 
 function App() {
   useEffect(() => {
@@ -10,7 +11,8 @@ function App() {
   return (
     <>
       <Intro />
-      <div className="min-h-screen w-full relative ">
+      <Navbar />
+      <div className="min-h-screen w-full relative overflow-hidden">
         {/* Azure Depths */}
         <div
           className="absolute inset-0 -z-10"
@@ -19,6 +21,7 @@ function App() {
               "radial-gradient(110% 110% at 60% 100%, #000000 25%, #001747 100%)",
           }}
         />
+        <Hero />
         <Hero />
       </div>
     </>
