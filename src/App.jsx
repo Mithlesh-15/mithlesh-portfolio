@@ -1,17 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Intro from "./components/intro";
 import Hero from "./components/Hero";
 import Navbar from "./components/NavBar";
 
 function App() {
+  const [showNavbar, setShowNavbar] = useState(false);
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
   }, []);
 
   return (
     <>
-      <Intro />
-      <Navbar />
+      <Intro onComplete={() => setShowNavbar(true)} />
+      {showNavbar && <Navbar />}
       <div className="min-h-screen w-full relative overflow-hidden">
         {/* Azure Depths */}
         <div

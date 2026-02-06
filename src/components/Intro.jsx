@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { TextEffect } from "../lib/motion/components/text-effect";
 
-function Intro() {
+function Intro({ onComplete }) {
   const introRef = useRef(null);
 
   useEffect(() => {
@@ -21,6 +21,7 @@ function Intro() {
       onComplete: () => {
         introRef.current.style.display = "none";
         document.body.style.overflow = "auto";
+        if (typeof onComplete === "function") onComplete();
       },
     });
   }, []);
