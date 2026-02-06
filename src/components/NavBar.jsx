@@ -1,16 +1,50 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP);
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef(null);
+
+  useGSAP(
+    () => {
+      if (!navRef.current) return;
+
+      gsap.from(navRef.current, {
+        y: -24,
+        opacity: 0,
+        duration: 1.1,
+        ease: "power3.out",
+      });
+
+      const logo = navRef.current.querySelector("[data-nav-logo]");
+      const links = navRef.current.querySelectorAll("[data-nav-link]");
+
+      gsap.from([logo, ...links], {
+        y: 12,
+        opacity: 0,
+        duration: 0.95,
+        ease: "power3.out",
+        stagger: 0.12,
+        delay: 0.2,
+      });
+    },
+    { scope: navRef }
+  );
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md">
+    <nav
+      ref={navRef}
+      className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md"
+    >
       <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/20 to-transparent"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="shrink-0">
+          <div className="shrink-0" data-nav-logo>
             <a href="/" className="group flex items-center space-x-2">
               <img
                 src="/components/Hero/logo.png"
@@ -27,13 +61,6 @@ export default function Navbar() {
             <NavLink href="#services">Services</NavLink>
             <NavLink href="#portfolio">Portfolio</NavLink>
             <NavLink href="#contact">Contact</NavLink>
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <button className="px-6 py-2.5 bg-white/10 backdrop-blur-sm text-white font-medium rounded-full border border-white/20 hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 active:scale-95">
-              Get Started
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,11 +112,6 @@ export default function Navbar() {
           <MobileNavLink href="#contact" onClick={() => setIsOpen(false)}>
             Contact
           </MobileNavLink>
-          <div className="pt-4">
-            <button className="w-full px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-medium rounded-full border border-white/20 hover:bg-white hover:text-black transition-all duration-300">
-              Get Started
-            </button>
-          </div>
         </div>
       </div>
     </nav>
@@ -101,6 +123,7 @@ function NavLink({ href, children }) {
   return (
     <a
       href={href}
+      data-nav-link
       className="relative px-4 py-2 text-white/90 font-medium text-sm tracking-wide hover:text-white transition-colors group"
     >
       {children}
