@@ -5,16 +5,16 @@ import { TextLoop } from "../lib/motion/components/text-loop";
 function Hero() {
   return (
     <>
-      <div className="relative text-white w-screen h-screen flex flex-col justify-center items-center pb-24">
-        <div className="flex flex-col items-center">
-          <div className="w-full text-green-500 -mb-0.5 md:-mb-0.5 lg:-mb-0.5 xl:-mb-1 flex justify-start text-xl  md:text-xl lg:text-2xl xl:text-3xl">
+      <div className="relative text-white w-screen min-h-screen flex flex-col justify-center items-center px-4 py-16">
+        <div className="flex flex-col items-center text-center max-w-3xl">
+          <div className="w-full text-green-500 -mb-0.5 md:-mb-0.5 lg:-mb-0.5 xl:-mb-1 flex justify-start text-xl md:text-xl lg:text-2xl xl:text-3xl">
             Hey I'm
           </div>
           <div className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
             Mithlesh Kumar Dewangan
           </div>
           <div className="w-full flex justify-end mt-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center gap-3 flex-wrap">
               <TextLoop
                 className="overflow-y-clip text-green-500"
                 transition={{
@@ -72,7 +72,30 @@ function Hero() {
               Resume
             </button>
           </div>
-          
+          <div className="mt-6 flex items-center justify-center gap-3 sm:gap-4">
+            <a
+              href="#"
+              aria-label="GitHub"
+              className="inline-flex items-center justify-center rounded-full p-2 text-slate-300 hover:text-green-500 hover:bg-white/5 transition-colors duration-300"
+            >
+              <Github className="h-6 w-6 sm:h-7 sm:w-7" />
+            </a>
+            <a
+              href="#"
+              aria-label="LinkedIn"
+              className="inline-flex items-center justify-center rounded-full p-2 text-slate-300 hover:text-green-500 hover:bg-white/5 transition-colors duration-300"
+            >
+              <Linkedin className="h-6 w-6 sm:h-7 sm:w-7" />
+            </a>
+            <a
+              href="#"
+              aria-label="Twitter"
+              className="inline-flex items-center justify-center rounded-full p-2 text-slate-300 hover:text-green-500 hover:bg-white/5 transition-colors duration-300"
+            >
+              <Twitter className="h-6 w-6 sm:h-7 sm:w-7" />
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );
