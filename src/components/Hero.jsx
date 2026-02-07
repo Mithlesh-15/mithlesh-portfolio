@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, FileText } from "lucide-react";
+import { Mail, FileText, Github, Linkedin, Twitter } from "lucide-react";
 import { TextLoop } from "../lib/motion/components/text-loop";
 
 function Hero() {
@@ -52,6 +52,16 @@ function Hero() {
               <span>Developer</span>
             </div>
           </div>
+          <p
+            className="mt-4 text-slate-300 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold italic"
+            style={{
+              fontFamily: "EB Garamond",
+              serif: true,
+              fontStyle: "italic",
+            }}
+          >
+            I build clean, fast, and scalable web applications.
+          </p>
           <div className="flex flex-wrap gap-3 sm:gap-4 mt-6">
             <button className="inline-flex items-center gap-2 bg-linear-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold px-7 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out border border-green-500/60">
               <Mail className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
@@ -62,7 +72,7 @@ function Hero() {
               Resume
             </button>
           </div>
-        </div>
+          
       </div>
     </>
   );
