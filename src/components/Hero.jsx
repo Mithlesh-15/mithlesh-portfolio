@@ -136,21 +136,24 @@ function Hero({ startAnimation = false }) {
           </div>
           <div className="hero-social mt-6 flex items-center justify-center gap-3 sm:gap-4">
             <a
-              href="#"
+              href="https://github.com/Mithlesh-15"
+              target="_blank"
               aria-label="GitHub"
               className="inline-flex items-center justify-center rounded-full p-2 text-slate-300 hover:text-green-500 hover:bg-white/5 transition-colors duration-300"
             >
               <Github className="h-6 w-6 sm:h-7 sm:w-7" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/mithlesh-kumar-dewangan-li15"
+              target="_blank"
               aria-label="LinkedIn"
               className="inline-flex items-center justify-center rounded-full p-2 text-slate-300 hover:text-green-500 hover:bg-white/5 transition-colors duration-300"
             >
               <Linkedin className="h-6 w-6 sm:h-7 sm:w-7" />
             </a>
             <a
-              href="#"
+              href="https://x.com/mithlesh__15?s=09"
+              target="_blank"
               aria-label="Twitter"
               className="inline-flex items-center justify-center rounded-full p-2 text-slate-300 hover:text-green-500 hover:bg-white/5 transition-colors duration-300"
             >
