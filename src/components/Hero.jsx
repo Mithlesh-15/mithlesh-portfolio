@@ -1,19 +1,70 @@
-import React from "react";
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { Mail, FileText, Github, Linkedin, Twitter } from "lucide-react";
 import { TextLoop } from "../lib/motion/components/text-loop";
 
 function Hero() {
+  const rootRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+          defaults: { ease: "power3.out", duration: 0.6 },
+        });
+
+        tl.fromTo(
+          [".hero-greet", ".hero-name", ".hero-roles"],
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.05 }
+        )
+          .fromTo(
+            ".hero-tagline",
+            { y: 16, opacity: 0 },
+            { y: 0, opacity: 1 },
+            "-=0.15"
+          )
+          .fromTo(
+            ".hero-actions > *",
+            { y: 18, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              stagger: 0.08,
+              duration: 0.35,
+              ease: "power3.out",
+              clearProps: "transform",
+            },
+            "-=0.2"
+          )
+          .fromTo(
+            ".hero-social > *",
+            { y: 10, opacity: 0 },
+            { y: 0, opacity: 1, stagger: 0.06, duration: 0.4 },
+            "-=0.15"
+          );
+      }, rootRef);
+
+      return () => ctx.revert();
+    },
+    { scope: rootRef }
+  );
+
   return (
     <>
-      <div className="relative text-white w-screen min-h-screen flex flex-col justify-center items-center px-4 py-16">
+      <div
+        ref={rootRef}
+        className="relative text-white w-screen min-h-screen flex flex-col justify-center items-center px-4 py-16"
+      >
         <div className="flex flex-col items-center text-center max-w-3xl">
-          <div className="w-full text-green-500 -mb-0.5 md:-mb-0.5 lg:-mb-0.5 xl:-mb-1 flex justify-start text-xl md:text-xl lg:text-2xl xl:text-3xl">
+          <div className="hero-greet w-full text-green-500 -mb-0.5 md:-mb-0.5 lg:-mb-0.5 xl:-mb-1 flex justify-start text-xl md:text-xl lg:text-2xl xl:text-3xl">
             Hey I'm
           </div>
-          <div className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
+          <div className="hero-name text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
             Mithlesh Kumar Dewangan
           </div>
-          <div className="w-full flex justify-end mt-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+          <div className="hero-roles w-full flex justify-end mt-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             <div className="flex items-center justify-center gap-3 flex-wrap">
               <TextLoop
                 className="overflow-y-clip text-green-500"
@@ -53,7 +104,7 @@ function Hero() {
             </div>
           </div>
           <p
-            className="mt-4 text-slate-300 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold italic"
+            className="hero-tagline mt-4 text-slate-300 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold italic"
             style={{
               fontFamily: "EB Garamond",
               serif: true,
@@ -62,7 +113,7 @@ function Hero() {
           >
             I build clean, fast, and scalable web applications.
           </p>
-          <div className="flex flex-wrap gap-3 sm:gap-4 mt-6">
+          <div className="hero-actions flex flex-wrap gap-3 sm:gap-4 mt-6">
             <button className="inline-flex items-center gap-2 bg-linear-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold px-7 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out border border-green-500/60">
               <Mail className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
               Contact Me
@@ -72,7 +123,7 @@ function Hero() {
               Resume
             </button>
           </div>
-          <div className="mt-6 flex items-center justify-center gap-3 sm:gap-4">
+          <div className="hero-social mt-6 flex items-center justify-center gap-3 sm:gap-4">
             <a
               href="#"
               aria-label="GitHub"
