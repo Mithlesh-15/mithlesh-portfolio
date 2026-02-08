@@ -4,12 +4,23 @@ import { useGSAP } from "@gsap/react";
 import { Mail, FileText, Github, Linkedin, Twitter } from "lucide-react";
 import { TextLoop } from "../lib/motion/components/text-loop";
 
-function Hero() {
+function Hero({ startAnimation = false }) {
   const rootRef = useRef(null);
 
   useGSAP(
     () => {
       const ctx = gsap.context(() => {
+        if (!startAnimation) {
+          gsap.set([".hero-greet", ".hero-name", ".hero-roles"], {
+            y: 20,
+            opacity: 0,
+          });
+          gsap.set(".hero-tagline", { y: 16, opacity: 0 });
+          gsap.set(".hero-actions > *", { y: 18, opacity: 0 });
+          gsap.set(".hero-social > *", { y: 10, opacity: 0 });
+          return;
+        }
+
         const tl = gsap.timeline({
           defaults: { ease: "power3.out", duration: 0.6 },
         });
@@ -48,7 +59,7 @@ function Hero() {
 
       return () => ctx.revert();
     },
-    { scope: rootRef }
+    { scope: rootRef, dependencies: [startAnimation] }
   );
 
   return (

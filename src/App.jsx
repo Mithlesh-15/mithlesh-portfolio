@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/NavBar";
 
 function App() {
-  const [showNavbar, setShowNavbar] = useState(true);
+  const [introDone, setIntroDone] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -12,8 +12,8 @@ function App() {
 
   return (
     <>
-      {/* <Intro onComplete={() => setShowNavbar(true)} /> */}
-      {showNavbar && <Navbar />}
+      <Intro onComplete={() => setIntroDone(true)} />
+      {introDone && <Navbar />}
       <div className="min-h-screen w-full relative overflow-hidden">
         {/* Azure Depths */}
         <div
@@ -23,7 +23,7 @@ function App() {
               "radial-gradient(110% 110% at 60% 100%, #000000 25%, #001747 100%)",
           }}
         />
-        <Hero />
+        <Hero startAnimation={introDone} />
       </div>
     </>
   );
