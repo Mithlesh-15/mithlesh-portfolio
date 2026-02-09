@@ -104,10 +104,10 @@ export default function Navbar() {
             About
           </MobileNavLink>
           <MobileNavLink href="#services" onClick={() => setIsOpen(false)}>
-            Services
+            Skills
           </MobileNavLink>
           <MobileNavLink href="#portfolio" onClick={() => setIsOpen(false)}>
-            Portfolio
+            Work
           </MobileNavLink>
           <MobileNavLink href="#contact" onClick={() => setIsOpen(false)}>
             Contact

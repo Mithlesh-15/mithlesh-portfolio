@@ -76,7 +76,7 @@ function Hero({ startAnimation = false }) {
             Mithlesh Kumar Dewangan
           </div>
           <div className="hero-roles w-full flex justify-end mt-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl">
-            <div className="flex items-center justify-center gap-3 flex-wrap">
+            <div className="flex items-center justify-center gap-3 flex-wrap mt-1">
               <TextLoop
                 className="overflow-y-clip text-green-500"
                 transition={{
