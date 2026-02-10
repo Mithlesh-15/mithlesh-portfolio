@@ -25,8 +25,8 @@ const highlights = [
 ];
 
 const metrics = [
-  { label: "Projects Built", value: "10+" },
-  { label: "Hackathons", value: "3+" },
+  { label: "Projects Delivered", value: "3+" },
+  { label: "Hackathon Wins", value: "3+" },
   { label: "Experience Level", value: "Fresher" },
 ];
 
@@ -40,7 +40,6 @@ function About() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-14 lg:grid-cols-[1.05fr_0.95fr] items-start">
-
           {/* LEFT */}
           <div className="space-y-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-1.5 text-sm text-green-400">
@@ -99,9 +98,6 @@ function About() {
             </div>
           </div>
         </div>
-
-        
-       
 
         {/* Highlights */}
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
