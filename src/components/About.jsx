@@ -48,22 +48,22 @@ function About() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
-              Building thoughtful interfaces and dependable systems.
+              Simple interfaces.
+              <br />
+              Solid systems.
             </h2>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              I’m Mithlesh Kumar Dewangan, a full-stack developer who enjoys
-              crafting clean frontends backed by scalable and well-structured
-              backend services. I care about clarity in UI, speed in delivery,
-              and writing code that’s easy to reason about.
+              I'm Mithlesh Kumar Dewangan, a full-stack developer who focuses on
+              building clean, reliable web applications. I value clarity,
+              consistency, and code that stays understandable over time.
             </p>
 
             <p
               className="text-slate-200/90 text-lg sm:text-xl italic"
               style={{ fontFamily: "EB Garamond, serif" }}
             >
-              I believe the best software feels invisible — fast, clear, and
-              quietly powerful.
+              Software should feel invisible — fast, clear, and dependable.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-3">
@@ -83,8 +83,8 @@ function About() {
 
           {/* RIGHT */}
           <div className="space-y-5">
-            <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-6 shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
-              <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div className="rounded-3xl border border-white/10 bg-linear-to-br from-white/10 via-white/5 to-transparent p-6 shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
+              <div className="aspect-4/5 w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5">
                 <img
                   src={profileImage}
                   alt="Mithlesh Kumar Dewangan"
