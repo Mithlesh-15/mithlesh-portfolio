@@ -202,7 +202,7 @@ function About() {
           </div>
 
           {/* RIGHT */}
-          <div className="space-y-5">
+          <div className="space-y-5 hidden lg:block">
             <div
               ref={imageContainerRef}
               className="rounded-3xl border border-white/10 bg-linear-to-br from-white/10 via-white/5 to-transparent p-6 shadow-[0_10px_40px_rgba(0,0,0,0.35)]"
@@ -223,7 +223,7 @@ function About() {
         </div>
 
         {/* Highlights */}
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="hidden lg:block mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {highlights.map(({ title, body, icon: Icon }, index) => (
             <div
               key={title}
