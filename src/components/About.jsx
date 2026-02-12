@@ -223,7 +223,7 @@ function About() {
         </div>
 
         {/* Highlights */}
-        <div className="hidden lg:block mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="hidden lg:grid mt-12 gap-6 md:grid-cols-2 xl:grid-cols-4">
           {highlights.map(({ title, body, icon: Icon }, index) => (
             <div
               key={title}

@@ -66,7 +66,7 @@ function Hero({ startAnimation = false }) {
     <>
       <div
         ref={rootRef}
-        className="relative text-white w-screen min-h-screen flex flex-col justify-center items-center px-4 py-16"
+        className="relative text-white w-screen min-h-[85vh] lg:min-h-screen flex flex-col justify-center items-center px-4 py-16"
       >
         <div className="flex flex-col items-center text-center max-w-3xl">
           <div className="hero-greet w-full text-green-500 -mb-0.5 md:-mb-0.5 lg:-mb-0.5 xl:-mb-1 flex justify-start text-xl md:text-xl lg:text-2xl xl:text-3xl">
