@@ -35,7 +35,7 @@ const metrics = [
 ];
 
 function About() {
-  const profileImage = "/component/about/photo.jpeg";
+  const profileImage = "/components/about/photo.jpeg";
 
   const sectionRef = useRef(null);
   const badgeRef = useRef(null);
@@ -111,17 +111,6 @@ function About() {
         opacity: 0,
         x: 50,
         rotateY: 15,
-      });
-
-      // Image parallax on scroll
-      gsap.to(imageContainerRef.current?.querySelector("img"), {
-        scrollTrigger: {
-          trigger: imageContainerRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1.5,
-        },
-        y: -40,
       });
 
       // Highlights cards animation
