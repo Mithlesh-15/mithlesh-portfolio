@@ -35,8 +35,8 @@ const metrics = [
 ];
 
 function About() {
-  const profileImage = "/images/profile.jpg";
-  
+  const profileImage = "/component/about/photo.jpeg";
+
   const sectionRef = useRef(null);
   const badgeRef = useRef(null);
   const headingRef = useRef(null);
@@ -52,7 +52,7 @@ function About() {
         scrollTrigger: {
           trigger: badgeRef.current,
           start: "top 80%",
-          end: "top 50%",
+          end: "top 70%",
           scrub: 1,
         },
         opacity: 0,
@@ -65,7 +65,7 @@ function About() {
         scrollTrigger: {
           trigger: headingRef.current,
           start: "top 80%",
-          end: "top 40%",
+          end: "top 60%",
           scrub: 1.5,
         },
         opacity: 0,
@@ -78,7 +78,7 @@ function About() {
         scrollTrigger: {
           trigger: paragraphsRef.current[0],
           start: "top 75%",
-          end: "top 40%",
+          end: "top 55%",
           scrub: 1.5,
         },
         opacity: 0,
@@ -90,8 +90,8 @@ function About() {
       gsap.from(metricsRef.current, {
         scrollTrigger: {
           trigger: metricsRef.current[0],
-          start: "top 80%",
-          end: "top 50%",
+          start: "bottom 100%",
+          end: "top 80%",
           scrub: 2,
         },
         opacity: 0,
@@ -128,31 +128,13 @@ function About() {
       gsap.from(highlightsRef.current, {
         scrollTrigger: {
           trigger: highlightsRef.current[0],
-          start: "top 85%",
-          end: "top 45%",
-          scrub: 2,
+          start: "top 90%",
+          end: "top 75%",
+          scrub: 1,
         },
         opacity: 0,
         y: 80,
         scale: 0.95,
-        stagger: 0.1,
-      });
-
-      // Floating animation for highlight icons
-      highlightsRef.current.forEach((card) => {
-        const icon = card?.querySelector(".icon-wrapper");
-        if (icon) {
-          gsap.to(icon, {
-            scrollTrigger: {
-              trigger: card,
-              start: "top bottom",
-              end: "bottom top",
-              scrub: 1,
-            },
-            y: -20,
-            rotation: 5,
-          });
-        }
       });
     }, sectionRef);
 

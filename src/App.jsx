@@ -26,7 +26,6 @@ function App() {
         />
         <Hero startAnimation={introDone} />
         <About />
-        <Hero startAnimation={introDone} />
       </div>
     </>
   );
