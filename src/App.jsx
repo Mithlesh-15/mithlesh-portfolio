@@ -3,6 +3,7 @@ import Intro from "./components/Intro";
 import Hero from "./components/Hero";
 import Navbar from "./components/NavBar";
 import About from "./components/About";
+import Skills from "./components/Skills";
 
 function App() {
   const [introDone, setIntroDone] = useState(false);
@@ -26,7 +27,7 @@ function App() {
         />
         <Hero startAnimation={introDone} />
         <About />
-        <Hero startAnimation={introDone} />
+        <Skills/>
       </div>
     </>
   );
