@@ -88,7 +88,81 @@ function Skills() {
       link: "https://expressjs.com/",
     },
   ];
-  
+  const line2 = [
+    {
+      name: "MongoDB",
+      logo: "https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000",
+      link: "https://www.mongodb.com/",
+    },
+    {
+      name: "PostgreSQL",
+      logo: "https://img.icons8.com/?size=100&id=38561&format=png&color=000000",
+      link: "https://www.postgresql.org/",
+    },
+    {
+      name: "Firebase",
+      logo: "https://img.icons8.com/?size=100&id=62452&format=png&color=000000",
+      link: "https://firebase.google.com/",
+    },
+    {
+      name: "Supabase",
+      logo: "https://img.icons8.com/?size=100&id=grZaE9tjqDyr&format=png&color=000000",
+      link: "https://supabase.com/",
+    },
+    {
+      name: "Git",
+      logo: "https://img.icons8.com/?size=100&id=20906&format=png&color=000000",
+      link: "https://git-scm.com/",
+    },
+    {
+      name: "GitHub",
+      logo: "https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000",
+      link: "https://github.com/",
+    },
+    {
+      name: "Postman",
+      logo: "https://img.icons8.com/?size=100&id=QEQQKirln6Tf&format=png&color=000000",
+      link: "https://www.postman.com/",
+    },
+
+    // repect element for infinite scroll
+
+    {
+      name: "MongoDB",
+      logo: "https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000",
+      link: "https://www.mongodb.com/",
+    },
+    {
+      name: "PostgreSQL",
+      logo: "https://img.icons8.com/?size=100&id=38561&format=png&color=000000",
+      link: "https://www.postgresql.org/",
+    },
+    {
+      name: "Firebase",
+      logo: "https://img.icons8.com/?size=100&id=62452&format=png&color=000000",
+      link: "https://firebase.google.com/",
+    },
+    {
+      name: "Supabase",
+      logo: "https://img.icons8.com/?size=100&id=grZaE9tjqDyr&format=png&color=000000",
+      link: "https://supabase.com/",
+    },
+    {
+      name: "Git",
+      logo: "https://img.icons8.com/?size=100&id=20906&format=png&color=000000",
+      link: "https://git-scm.com/",
+    },
+    {
+      name: "GitHub",
+      logo: "https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000",
+      link: "https://github.com/",
+    },
+    {
+      name: "Postman",
+      logo: "https://img.icons8.com/?size=100&id=QEQQKirln6Tf&format=png&color=000000",
+      link: "https://www.postman.com/",
+    },
+  ];
   const line3 = [];
   return (
     <section id="skills" className="w-full py-20 text-white ">
