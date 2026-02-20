@@ -238,15 +238,20 @@ function Skills() {
       link: "https://dart.dev/",
     },
   ];
-  const renderSkillLine = (line) => (
-    <div className="w-full text-black flex justify-start md:justify-center gap-3 sm:gap-4 lg:gap-6 overflow-x-auto pb-2 snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+  const renderSkillLine = (line, direction) => (
+    <div className="skills-marquee w-full overflow-hidden">
+      <div
+        className={`skills-marquee-track ${
+          direction === "right" ? "skills-marquee-right" : "skills-marquee-left"
+        } text-black flex gap-3 sm:gap-4 lg:gap-6 w-max`}
+      >
       {line.map((item, index) => (
         <a
           key={index}
           href={item.link}
           target="_blank"
           rel="noreferrer"
-          className="bg-white rounded-lg px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex items-center gap-2 sm:gap-3 shadow-sm transition-transform duration-200 hover:scale-105 shrink-0 snap-start"
+          className="bg-white rounded-lg px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex items-center gap-2 sm:gap-3 shadow-sm transition-transform duration-200 hover:scale-105 shrink-0"
         >
           <img
             src={item.logo}
@@ -258,6 +263,7 @@ function Skills() {
           </span>
         </a>
       ))}
+      </div>
     </div>
   );
 
@@ -272,9 +278,9 @@ function Skills() {
         </h2>
       </div>
       <div className="w-full flex flex-col gap-5 sm:gap-8 lg:gap-10">
-        {renderSkillLine(line1)}
-        {renderSkillLine(line2)}
-        {renderSkillLine(line3)}
+        {renderSkillLine(line1, "right")}
+        {renderSkillLine(line2, "left")}
+        {renderSkillLine(line3, "right")}
       </div>
     </section>
   );
