@@ -44,7 +44,7 @@ function Skills() {
       link: "https://expressjs.com/",
     },
 
-    // repect element for infinite scroll
+    // repeat element for infinite scroll
 
     {
       name: "HTML",
@@ -125,7 +125,7 @@ function Skills() {
       link: "https://www.postman.com/",
     },
 
-    // repect element for infinite scroll
+    // repeat element for infinite scroll
 
     {
       name: "MongoDB",
@@ -163,7 +163,81 @@ function Skills() {
       link: "https://www.postman.com/",
     },
   ];
-  const line3 = [];
+  const line3 = [
+    {
+      name: "Next.js",
+      logo: "https://img.icons8.com/?size=100&id=yUdJlcKanVbh&format=png&color=000000",
+      link: "https://nextjs.org/",
+    },
+    {
+      name: "Tailwind CSS",
+      logo: "https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png&color=000000",
+      link: "https://tailwindcss.com/",
+    },
+    {
+      name: "Redux",
+      logo: "https://img.icons8.com/?size=100&id=jD-fJzVguBmw&format=png&color=000000",
+      link: "https://redux.js.org/",
+    },
+    {
+      name: "React Native",
+      logo: "https://img.icons8.com/?size=100&id=wPohyHO_qO1a&format=png&color=000000",
+      link: "https://reactnative.dev/",
+    },
+    {
+      name: "Expo",
+      logo: "https://img.icons8.com/?size=100&id=7ImWFDcPfSlz&format=png&color=000000",
+      link: "https://expo.dev/",
+    },
+    {
+      name: "Flutter",
+      logo: "https://img.icons8.com/?size=100&id=7I3BjCqe9rjG&format=png&color=000000",
+      link: "https://flutter.dev/",
+    },
+    {
+      name: "Dart",
+      logo: "https://img.icons8.com/?size=100&id=7AFcZ2zirX6Y&format=png&color=000000",
+      link: "https://dart.dev/",
+    },
+
+    // repeat element for infinite scroll
+
+    {
+      name: "Next.js",
+      logo: "https://img.icons8.com/?size=100&id=yUdJlcKanVbh&format=png&color=000000",
+      link: "https://nextjs.org/",
+    },
+    {
+      name: "Tailwind CSS",
+      logo: "https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png&color=000000",
+      link: "https://tailwindcss.com/",
+    },
+    {
+      name: "Redux",
+      logo: "https://img.icons8.com/?size=100&id=jD-fJzVguBmw&format=png&color=000000",
+      link: "https://redux.js.org/",
+    },
+    {
+      name: "React Native",
+      logo: "https://img.icons8.com/?size=100&id=wPohyHO_qO1a&format=png&color=000000",
+      link: "https://reactnative.dev/",
+    },
+    {
+      name: "Expo",
+      logo: "https://img.icons8.com/?size=100&id=7ImWFDcPfSlz&format=png&color=000000",
+      link: "https://expo.dev/",
+    },
+    {
+      name: "Flutter",
+      logo: "https://img.icons8.com/?size=100&id=7I3BjCqe9rjG&format=png&color=000000",
+      link: "https://flutter.dev/",
+    },
+    {
+      name: "Dart",
+      logo: "https://img.icons8.com/?size=100&id=7AFcZ2zirX6Y&format=png&color=000000",
+      link: "https://dart.dev/",
+    },
+  ];
   return (
     <section id="skills" className="w-full py-20 text-white ">
       <div className="flex justify-center mx-auto max-w-6xl">
