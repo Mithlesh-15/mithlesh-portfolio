@@ -238,69 +238,43 @@ function Skills() {
       link: "https://dart.dev/",
     },
   ];
+  const renderSkillLine = (line) => (
+    <div className="w-full text-black flex justify-start md:justify-center gap-3 sm:gap-4 lg:gap-6 overflow-x-auto pb-2 snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      {line.map((item, index) => (
+        <a
+          key={index}
+          href={item.link}
+          target="_blank"
+          rel="noreferrer"
+          className="bg-white rounded-lg px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex items-center gap-2 sm:gap-3 shadow-sm transition-transform duration-200 hover:scale-105 shrink-0 snap-start"
+        >
+          <img
+            src={item.logo}
+            alt={`${item.name} logo`}
+            className="w-7 h-7 sm:w-9 sm:h-9 lg:w-10 lg:h-10 object-contain"
+          />
+          <span className="font-bold text-sm sm:text-base lg:text-xl whitespace-nowrap">
+            {item.name}
+          </span>
+        </a>
+      ))}
+    </div>
+  );
+
   return (
-    <section id="skills" className="w-full py-20 text-white ">
-      <div className="flex justify-center mx-auto max-w-6xl">
-        {/* Heading */}
-        <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-semibold mb-12 inline-block border-b-4 pb-2">
+    <section
+      id="skills"
+      className="w-full py-12 sm:py-16 lg:py-20 text-white"
+    >
+      <div className="w-full flex justify-center">
+        <h2 className="text-center text-2xl sm:text-4xl lg:text-5xl font-semibold mb-8 sm:mb-12 inline-block border-b-4 pb-2">
           Skills & Technologies
         </h2>
       </div>
-      <div className="w-full flex justify-center flex-col gap-10">
-        <div className="w-full text-black flex justify-center gap-6 overflow-x-hidden">
-          {line1.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-white rounded-lg px-8 py-3 flex items-center gap-3 shadow-sm transition-transform duration-200 hover:scale-110 shrink-0"
-            >
-              <img
-                src={item.logo}
-                alt={`${item.name} logo`}
-                className="w-8 h-8 sm:w-10 sm:h-10 object-contain "
-              />
-              <span className="font-bold text-xl">{item.name}</span>
-            </a>
-          ))}
-        </div>
-        <div className="w-full text-black flex justify-center gap-6 overflow-x-hidden">
-          {line2.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-white rounded-lg px-8 py-3 flex items-center gap-3 shadow-sm transition-transform duration-200 hover:scale-110 shrink-0"
-            >
-              <img
-                src={item.logo}
-                alt={`${item.name} logo`}
-                className="w-8 h-8 sm:w-10 sm:h-10 object-contain "
-              />
-              <span className="font-bold text-xl">{item.name}</span>
-            </a>
-          ))}
-        </div>
-        <div className="w-full text-black flex justify-center gap-6 overflow-x-hidden">
-          {line3.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-white rounded-lg px-8 py-3 flex items-center gap-3 shadow-sm transition-transform duration-200 hover:scale-110 shrink-0"
-            >
-              <img
-                src={item.logo}
-                alt={`${item.name} logo`}
-                className="w-8 h-8 sm:w-10 sm:h-10 object-contain "
-              />
-              <span className="font-bold text-xl">{item.name}</span>
-            </a>
-          ))}
-        </div>
+      <div className="w-full flex flex-col gap-5 sm:gap-8 lg:gap-10">
+        {renderSkillLine(line1)}
+        {renderSkillLine(line2)}
+        {renderSkillLine(line3)}
       </div>
     </section>
   );
